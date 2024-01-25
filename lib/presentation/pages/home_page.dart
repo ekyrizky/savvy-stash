@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:savvy_stash/app/theme/colors.dart';
+import 'package:savvy_stash/presentation/components/molecules/calendar_molecule.dart';
 import 'package:savvy_stash/presentation/components/molecules/profile_header_molecule.dart';
 
 class HomePage extends StatelessWidget {
@@ -13,6 +14,17 @@ class HomePage extends StatelessWidget {
         child: Column(
           children: [
             ProfileHeaderMolecule(),
+            CalendarMolecule(
+              onCalendarClick: () {
+                print('calendar click');
+              },
+              onNext: () {
+                print('next click');
+              },
+              onPrev: () {
+                print('prev click');
+              },
+            ),
           ],
         ),
       ),
