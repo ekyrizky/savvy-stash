@@ -23,7 +23,7 @@ class CalendarAtom extends StatelessWidget {
           SizedBox(width: 6),
           Text(
             'Januari 2024',
-            style: AppTypography.bodyMedium
+            style: AppTypography.bodySmall
                 .copyWith(color: AppColors.kPrimaryColor),
           ),
         ],
