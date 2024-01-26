@@ -28,7 +28,11 @@ class HomePage extends StatelessWidget {
               },
             ),
             BalanceCardMolecule(),
-            AccountOrganism()
+            AccountOrganism(
+              onClick: () {
+                print('add account click');
+              },
+            )
           ],
         ),
       ),

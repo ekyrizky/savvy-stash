@@ -4,7 +4,9 @@ import 'package:savvy_stash/presentation/components/atoms/action_card_atom.dart'
 import 'package:savvy_stash/presentation/components/atoms/balance_card_atom.dart';
 
 class AccountCardMolecule extends StatelessWidget {
-  const AccountCardMolecule({super.key});
+  const AccountCardMolecule({super.key, required this.onClick});
+
+  final VoidCallback onClick;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class AccountCardMolecule extends StatelessWidget {
           ActionCardAtom(
             text: 'Add',
             icon: Icons.add,
-            onClick: () {},
+            onClick: onClick,
           ),
         ],
       ),

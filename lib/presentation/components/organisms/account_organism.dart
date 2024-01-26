@@ -4,7 +4,9 @@ import 'package:savvy_stash/app/theme/typography.dart';
 import 'package:savvy_stash/presentation/components/molecules/account_card_molecule.dart';
 
 class AccountOrganism extends StatelessWidget {
-  const AccountOrganism({super.key});
+  const AccountOrganism({super.key, required this.onClick});
+
+  final VoidCallback onClick;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class AccountOrganism extends StatelessWidget {
               .copyWith(color: AppColors.kPrimaryColor),
         ),
         const SizedBox(height: 4),
-        AccountCardMolecule(),
+        AccountCardMolecule(onClick: onClick)
       ],
     );
   }

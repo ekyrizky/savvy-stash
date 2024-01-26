@@ -26,6 +26,7 @@ class ActionCardAtom extends StatelessWidget {
           maxWidth: 180.0,
         ),
         decoration: BoxDecoration(
+          color: Colors.white,
           border: Border.all(color: AppColors.kSecondaryColor),
           borderRadius: BorderRadius.circular(10),
         ),
