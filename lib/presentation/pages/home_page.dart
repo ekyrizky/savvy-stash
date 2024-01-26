@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:savvy_stash/app/theme/colors.dart';
-import 'package:savvy_stash/presentation/components/atoms/balance_card.dart';
+import 'package:savvy_stash/presentation/components/molecules/balance_card_molecule.dart';
 import 'package:savvy_stash/presentation/components/molecules/calendar_molecule.dart';
 import 'package:savvy_stash/presentation/components/molecules/profile_header_molecule.dart';
 
@@ -26,11 +26,7 @@ class HomePage extends StatelessWidget {
                 print('prev click');
               },
             ),
-            BalanceCard(
-              cardColor: AppColors.kGreenColor.withOpacity(0.2),
-              title: 'Income',
-              value: 'Rp 500.000',
-            )
+            BalanceCardMolecule(),
           ],
         ),
       ),

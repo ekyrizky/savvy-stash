@@ -2,17 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:savvy_stash/app/theme/colors.dart';
 import 'package:savvy_stash/app/theme/typography.dart';
 
-class BalanceCard extends StatelessWidget {
-  const BalanceCard({
+class BalanceCardAtom extends StatelessWidget {
+  const BalanceCardAtom({
     super.key,
     required this.cardColor,
     required this.title,
     required this.value,
+    this.icon,
   });
 
   final String title;
   final String value;
   final Color cardColor;
+  final IconData? icon;
 
   @override
   Widget build(BuildContext context) {
@@ -31,10 +33,20 @@ class BalanceCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(
-            title,
-            style: AppTypography.bodySmall
-                .copyWith(color: AppColors.kPrimaryColor),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                title,
+                style: AppTypography.bodySmall
+                    .copyWith(color: AppColors.kPrimaryColor),
+              ),
+              Icon(
+                icon,
+                size: 20,
+                color: AppColors.kPrimaryColor,
+              ),
+            ],
           ),
           SizedBox(height: 8),
           Text(
