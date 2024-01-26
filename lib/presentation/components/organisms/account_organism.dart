@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:savvy_stash/app/theme/colors.dart';
-import 'package:savvy_stash/app/theme/typography.dart';
+import 'package:savvy_stash/presentation/components/atoms/section_title_atom.dart';
 import 'package:savvy_stash/presentation/components/molecules/account_card_molecule.dart';
 
 class AccountOrganism extends StatelessWidget {
@@ -13,11 +12,7 @@ class AccountOrganism extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Account',
-          style: AppTypography.titleMedium
-              .copyWith(color: AppColors.kPrimaryColor),
-        ),
+        SectionTitleAtom(title: 'Account'),
         const SizedBox(height: 4),
         AccountCardMolecule(onClick: onClick)
       ],
