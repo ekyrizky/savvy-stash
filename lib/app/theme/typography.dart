@@ -33,17 +33,17 @@ class AppTypography {
   );
 
   static TextStyle labelLarge = GoogleFonts.plusJakartaSans(
-    fontSize: 16,
-    fontWeight: FontWeight.w200,
+    fontSize: 12,
+    fontWeight: FontWeight.normal,
   );
 
   static TextStyle labelMedium = GoogleFonts.plusJakartaSans(
-    fontSize: 14,
-    fontWeight: FontWeight.w200,
+    fontSize: 10,
+    fontWeight: FontWeight.normal,
   );
 
-  static TextStyle labelsMALL = GoogleFonts.plusJakartaSans(
-    fontSize: 12,
-    fontWeight: FontWeight.w200,
+  static TextStyle labelSmall = GoogleFonts.plusJakartaSans(
+    fontSize: 8,
+    fontWeight: FontWeight.normal,
   );
 }
