@@ -5,16 +5,20 @@ import 'package:savvy_stash/app/theme/typography.dart';
 class BalanceCardAtom extends StatelessWidget {
   const BalanceCardAtom({
     super.key,
-    required this.cardColor,
     required this.title,
     required this.value,
+    this.valueColor,
+    required this.cardColor,
     this.icon,
+    this.border,
   });
 
   final String title;
   final String value;
   final Color cardColor;
+  final Color? valueColor;
   final IconData? icon;
+  final Border? border;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +31,7 @@ class BalanceCardAtom extends StatelessWidget {
       ),
       decoration: BoxDecoration(
         color: cardColor,
+        border: border,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Column(
@@ -52,7 +57,7 @@ class BalanceCardAtom extends StatelessWidget {
           Text(
             value,
             style: AppTypography.titleMedium
-                .copyWith(color: AppColors.kPrimaryColor),
+                .copyWith(color: valueColor ?? AppColors.kPrimaryColor),
             overflow: TextOverflow.ellipsis,
           ),
         ],

@@ -3,6 +3,7 @@ import 'package:savvy_stash/app/theme/colors.dart';
 import 'package:savvy_stash/presentation/components/molecules/balance_card_molecule.dart';
 import 'package:savvy_stash/presentation/components/molecules/calendar_molecule.dart';
 import 'package:savvy_stash/presentation/components/molecules/profile_header_molecule.dart';
+import 'package:savvy_stash/presentation/components/organisms/account_organism.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -27,6 +28,7 @@ class HomePage extends StatelessWidget {
               },
             ),
             BalanceCardMolecule(),
+            AccountOrganism()
           ],
         ),
       ),
