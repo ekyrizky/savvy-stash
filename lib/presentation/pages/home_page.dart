@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:savvy_stash/app/theme/colors.dart';
-import 'package:savvy_stash/presentation/components/atoms/transaction_atom.dart';
 import 'package:savvy_stash/presentation/components/molecules/balance_card_molecule.dart';
 import 'package:savvy_stash/presentation/components/molecules/calendar_molecule.dart';
 import 'package:savvy_stash/presentation/components/molecules/profile_header_molecule.dart';
-import 'package:savvy_stash/presentation/components/molecules/transaction_item_molecule.dart';
 import 'package:savvy_stash/presentation/components/organisms/account_organism.dart';
 import 'package:savvy_stash/presentation/components/organisms/transaction_card_organism.dart';
 
@@ -36,7 +34,20 @@ class HomePage extends StatelessWidget {
                 print('add account click');
               },
             ),
-            TransactionCardOrganism(),
+            TransactionCardOrganism(
+              title: 'Spending Categories',
+              actionText: 'See All',
+              onActionClick: () {
+                print('see all spending click');
+              },
+            ),
+            TransactionCardOrganism(
+              title: 'Recent Transactions',
+              actionText: 'See All',
+              onActionClick: () {
+                print('see all transaction click');
+              },
+            ),
           ],
         ),
       ),

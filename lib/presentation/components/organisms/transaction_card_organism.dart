@@ -4,17 +4,27 @@ import 'package:savvy_stash/presentation/components/atoms/section_title_atom.dar
 import 'package:savvy_stash/presentation/components/molecules/transaction_item_molecule.dart';
 
 class TransactionCardOrganism extends StatelessWidget {
-  const TransactionCardOrganism({super.key});
+  const TransactionCardOrganism({
+    super.key,
+    required this.title,
+    required this.actionText,
+    this.onActionClick,
+  });
+
+  final String title;
+  final String actionText;
+  final VoidCallback? onActionClick;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         SectionTitleAtom(
-          title: 'Spending Categories',
-          actionText: 'See All',
+          title: title,
+          actionText: actionText,
+          onClick: onActionClick,
         ),
-        SizedBox(height: 4),
+        const SizedBox(height: 4),
         Container(
           padding: EdgeInsets.all(16),
           decoration: BoxDecoration(
