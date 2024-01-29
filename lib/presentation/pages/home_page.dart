@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:savvy_stash/app/theme/colors.dart';
 import 'package:savvy_stash/presentation/components/molecules/balance_card_molecule.dart';
 import 'package:savvy_stash/presentation/components/molecules/calendar_molecule.dart';
 import 'package:savvy_stash/presentation/components/molecules/profile_header_molecule.dart';
@@ -11,9 +10,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.kBackgroundColor,
-      body: SafeArea(
+    return SafeArea(
+      child: SingleChildScrollView(
         child: Column(
           children: [
             ProfileHeaderMolecule(),
