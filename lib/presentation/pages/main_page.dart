@@ -1,34 +1,41 @@
-import 'package:flutter/cupertino.dart';
-import 'package:savvy_stash/app/theme/colors.dart';
-import 'package:savvy_stash/app/utils/page_type.dart';
-import 'package:savvy_stash/presentation/pages/custom_page.dart';
-import 'package:savvy_stash/presentation/pages/home_page.dart';
+import 'package:flutter/material.dart';
+import 'package:savvy_stash/data/models/tab_item.dart';
+import 'package:savvy_stash/presentation/components/custom_tab_bar.dart';
 
-class MainPage extends StatelessWidget {
+class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
   @override
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
+  late Widget _tabBody;
+
+  @override
+  void initState() {
+    _tabBody = TabItem.tabItems.first.page;
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return CupertinoTabScaffold(
-      tabBar: CupertinoTabBar(
-        backgroundColor: AppColors.kPrimaryColor,
-        items: PageType.values
-            .map((e) => BottomNavigationBarItem(icon: e.icon, label: e.label))
-            .toList(),
-        inactiveColor: AppColors.kGrayColor,
-        activeColor: AppColors.kSecondaryColor,
+    return Scaffold(
+      body: Stack(
+        children: [
+          _tabBody,
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: CustomTabBar(onTabChange: (index) {
+              setState(() {
+                _tabBody = TabItem.tabItems[index].page;
+              });
+            }),
+          ),
+        ],
       ),
-      tabBuilder: (context, index) {
-        final type = PageType.values[index];
-        switch (type) {
-          case PageType.home:
-            return HomePage();
-          case PageType.transaction:
-            return CustomPage(label: 'Transaction');
-          case PageType.profile:
-            return CustomPage(label: 'Profile');
-        }
-      },
     );
   }
 }

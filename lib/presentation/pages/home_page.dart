@@ -53,6 +53,7 @@ class HomePage extends StatelessWidget {
                   print('see all transaction click');
                 },
               ),
+              SizedBox(height: 56),
             ],
           ),
         ),
