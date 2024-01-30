@@ -24,7 +24,7 @@ class TransactionCardOrganism extends StatelessWidget {
           actionText: actionText,
           onClick: onActionClick,
         ),
-        const SizedBox(height: 4),
+        const SizedBox(height: 8),
         Container(
           padding: EdgeInsets.all(16),
           decoration: BoxDecoration(

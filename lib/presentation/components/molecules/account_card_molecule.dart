@@ -23,7 +23,7 @@ class AccountCardMolecule extends StatelessWidget {
             icon: Icons.account_balance_wallet,
             border: Border.all(color: AppColors.kSecondaryColor),
           ),
-          const SizedBox(width: 8),
+          const SizedBox(width: 10),
           ActionCardAtom(
             text: 'Add',
             icon: Icons.add,

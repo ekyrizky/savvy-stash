@@ -10,16 +10,20 @@ class BalanceCardMolecule extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        BalanceCardAtom(
-          title: 'Income',
-          value: 'Rp 500.000',
-          cardColor: AppColors.kGreenColor.withOpacity(0.15),
+        Expanded(
+          child: BalanceCardAtom(
+            title: 'Income',
+            value: 'Rp 500.000',
+            cardColor: AppColors.kGreenColor.withOpacity(0.15),
+          ),
         ),
-        const SizedBox(width: 8),
-        BalanceCardAtom(
-          title: 'Expense',
-          value: 'Rp 350.000',
-          cardColor: AppColors.kRedColor.withOpacity(0.15),
+        const SizedBox(width: 10),
+        Expanded(
+          child: BalanceCardAtom(
+            title: 'Expense',
+            value: 'Rp 350.000',
+            cardColor: AppColors.kRedColor.withOpacity(0.15),
+          ),
         ),
       ],
     );

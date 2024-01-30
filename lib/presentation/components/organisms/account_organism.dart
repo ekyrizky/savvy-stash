@@ -13,7 +13,7 @@ class AccountOrganism extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SectionTitleAtom(title: 'Account'),
-        const SizedBox(height: 4),
+        const SizedBox(height: 8),
         AccountCardMolecule(onClick: onClick)
       ],
     );

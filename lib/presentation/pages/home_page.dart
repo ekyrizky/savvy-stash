@@ -12,41 +12,49 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: SingleChildScrollView(
-        child: Column(
-          children: [
-            ProfileHeaderMolecule(),
-            CalendarMolecule(
-              onCalendarClick: () {
-                print('calendar click');
-              },
-              onNext: () {
-                print('next click');
-              },
-              onPrev: () {
-                print('prev click');
-              },
-            ),
-            BalanceCardMolecule(),
-            AccountOrganism(
-              onClick: () {
-                print('add account click');
-              },
-            ),
-            TransactionCardOrganism(
-              title: 'Spending Categories',
-              actionText: 'See All',
-              onActionClick: () {
-                print('see all spending click');
-              },
-            ),
-            TransactionCardOrganism(
-              title: 'Recent Transactions',
-              actionText: 'See All',
-              onActionClick: () {
-                print('see all transaction click');
-              },
-            ),
-          ],
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: Column(
+            children: [
+              ProfileHeaderMolecule(),
+              SizedBox(height: 32),
+              CalendarMolecule(
+                onCalendarClick: () {
+                  print('calendar click');
+                },
+                onNext: () {
+                  print('next click');
+                },
+                onPrev: () {
+                  print('prev click');
+                },
+              ),
+              SizedBox(height: 20),
+              BalanceCardMolecule(),
+              SizedBox(height: 20),
+              AccountOrganism(
+                onClick: () {
+                  print('add account click');
+                },
+              ),
+              SizedBox(height: 20),
+              TransactionCardOrganism(
+                title: 'Spending Categories',
+                actionText: 'See All',
+                onActionClick: () {
+                  print('see all spending click');
+                },
+              ),
+              SizedBox(height: 20),
+              TransactionCardOrganism(
+                title: 'Recent Transactions',
+                actionText: 'See All',
+                onActionClick: () {
+                  print('see all transaction click');
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );
